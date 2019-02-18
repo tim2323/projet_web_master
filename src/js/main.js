@@ -33,7 +33,7 @@ function scrollFunction() {
     navbar.classList.remove('fixed-top')
   }
 }
-
+backgroundColor
 
 
 // Footer 
