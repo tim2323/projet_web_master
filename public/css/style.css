@@ -1,11 +1,16 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Poppins";
-  src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"), url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  src: url("../fonts/Poppins-Regular.ttf");
 }
-/* body {
-  font-family: 'Source Sans Pro', sans-serif;
-} */
+
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+
+
 #bg-gris {
   background-color: #f3f2f3;
 }
@@ -25,7 +30,7 @@ a:hover {
 }
 .color-perso-rouge {
   color: #BD584E;
-  font-size: 39px;
+  font-size: 59px;
   font-weight: 300;
   visibility: inherit;
 }
@@ -46,11 +51,28 @@ a:hover {
 }
 /* end header */
 
-/* début jumbotron */
-.taille-margin {
-  margin-left: 140px;
-  margin-top: 100px;
+
+/* nav scroll */
+.navSticky1 {
+position: fixed;
+top: 0px;
+width: 100%;
+transition: all 1s;
+z-index: 99;
 }
+.navSticky2 {
+  position: fixed;
+  top: -120px;
+  width: 100%;
+  transition: all 1s;
+z-index: 99;
+}
+.paddingSup{
+  margin-top: 255px;
+}
+
+
+/* début jumbotron */
 .taille-img-jumbo {
   width: 80%;
 }
@@ -62,13 +84,18 @@ a:hover {
 }
 #image-service1 {
   background-image: url("../images/services/service-1.jpg");
-  background: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 #image-service2 {
   background: url("../images/services/service-2.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
-#image-slider-3 {
+#image-service3 {
   background: url("../images/services/slider-3.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .style-texte {
   font-size: 29px;
@@ -244,7 +271,8 @@ h2 {
   font-size: 39px;
 }
 .taille-h3 {
-  font-size: 16px;
+  text-transform: uppercase;
+  font-size: 19px;
   font-weight: 600;
   letter-spacing: 0px;
 }

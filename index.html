@@ -5,14 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="public/css/style.css">
-    <link rel="stylesheet" href="public/scss/style.scss">
 
     <title>Emporium</title>
 </head>
@@ -21,12 +15,15 @@
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
+                <!-- titre connection -->
+                <div id="pageConnection">
                 <div class="modal-header">
                     <h5 class="modal-title exampleModalLabel">Connection</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                <!-- connection -->
                 <div class="modal-body">
                     <form>
                         <div class="form-group">
@@ -42,65 +39,73 @@
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
                             <label class="form-check-label" for="exampleCheck1">Check me out</label>
                         </div>
-                        <button type="submit" class="btn btn-primary bg-success">Submit</button>
+                        <button type="button" class="btn btn-primary bg-success">Submit</button>
+                        <button type="button" class="btn btn-light" id="buttonEnregistrement">Register</button>
                     </form>
                 </div>
+                </div>
+                <!-- titre register -->
+                <div id="pageEnregistrement" class="d-none">
                 <div class="modal-header">
-                    <h5 class="modal-title exampleModalLabel">Register</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                        <h5 class="modal-title exampleModalLabel">Register</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <!-- enregistrement -->
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4">Email</label>
+                                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputPassword4">Password</label>
+                                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputAddress">Address</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputAddress2">Address 2</label>
+                                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputCity">City</label>
+                                    <input type="text" class="form-control" id="inputCity">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="inputState">State</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected>Choose...</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="inputZip">Zip</label>
+                                    <input type="text" class="form-control" id="inputZip">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <label class="form-check-label" for="gridCheck">
+                                        Check me out
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary">Sign in</button>
+                            <button type="button" class="btn btn-primary bg-success" id="buttonConnexion">Connection</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputEmail4">Email</label>
-                                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="inputPassword4">Password</label>
-                                <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputAddress">Address</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                        </div>
-                        <div class="form-group">
-                            <label for="inputAddress2">Address 2</label>
-                            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputCity">City</label>
-                                <input type="text" class="form-control" id="inputCity">
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label for="inputState">State</label>
-                                <select id="inputState" class="form-control">
-                                    <option selected>Choose...</option>
-                                    <option>...</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-2">
-                                <label for="inputZip">Zip</label>
-                                <input type="text" class="form-control" id="inputZip">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">
-                                    Check me out
-                                </label>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Sign in</button>
-                    </form>
-                </div>
+                <!-- bouton close & save -->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary bg-success" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary bg-dark">Save changes</button>
                 </div>
             </div>
@@ -110,9 +115,10 @@
     
     <!-- Début header -->
     <header id="header-background" class="py-3 ">
-        <h1 class="text-center mt-5 py-5 font-weight-bold">emporium.</h1>
+        <h1 class="text-center mt-5 py-5 font-weight-bold" id="image1"  >emporium.</h1>
         <!-- debut navbar -->
         <nav class="navbar navbar-expand-lg navbar-light transparent" id="navbar">
+            <h1 class="text-center font-weight-bold d-none" id="image2">emporium.</h1>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -157,10 +163,10 @@
     <!-- End header -->
     
     <!-- Début section jumbotron -->
-    <section id="bg-gris">
-        <div class="row m-0">
+    <section class="container-fluid" id="bg-gris">
+        <div class="row ml-5">
             <!-- text,button -->
-            <div class="col-sm-12 col-lg-5 taille-margin">
+            <div class="col-sm-12 col-md-5 col-lg-5 ml-5">
                 <div class="m-5 p-5">
                     <h1 class="color-perso-rouge">Shop at</h1>
                     <h1 class="perso-modif">empororium.</h1>
@@ -169,7 +175,7 @@
                 </div>
             </div>
             <!-- image -->
-            <div class="col-sm-12 col-lg-6"> 
+            <div class="col-sm-12 col-md-4 col-lg-6"> 
                 <img src="public/images/slider-1.jpg" alt="" class="taille-img-jumbo">
             </div>
         </div>
@@ -179,14 +185,14 @@
     <!-- Début section living-room -->
     <div class="container-fluid">
         <section class="row my-5 d-flex justify-content-center ">
-            <div class="col-sm-12 col-lg-3 text-center p-5 mx-4 " id="image-service1">
-                <p class="my-5 py-5" ><a href="#" class="text-white style-texte border-bottom py-3 text-uppercase">Linving Room</a></p>
+            <div class="col-sm-12 col-lg-4 text-center">
+                <div id="image-service1" class="py-3"><p class="my-5 py-5" ><a href="#" class="text-white style-texte border-bottom py-3 text-uppercase">Living Room</a></p></div>
             </div>
-            <div class="col-sm-12 col-lg-3 text-center p-5 mx-4 " id="image-service2">
-                <p class="my-5 py-5" ><a href="#" class="text-white style-texte border-bottom py-3 text-uppercase">Sales Items</a></p>
+            <div class="col-sm-12 col-lg-4 text-center">
+                <div id="image-service2" class="py-3"><p class="my-5 py-5" ><a href="#" class="text-white style-texte border-bottom py-3 text-uppercase">Sales Items</a></p></div>
             </div>
-            <div class="col-sm-12 col-lg-3 text-center p-5 mx-4 " id="image-slider-3">
-                <p class="my-5 py-5" ><a href="#" class="text-white style-texte border-bottom py-3 text-uppercase">Clothes </a></p>
+            <div class="col-sm-12 col-lg-4 text-center">
+                <div id="image-service3" class="py-3"><p class="my-5 py-5" ><a href="#" class="text-white style-texte border-bottom py-3 text-uppercase">Clothes </a></p></div>
             </div>
         </section>
     </div>
@@ -437,27 +443,27 @@
             <div class="col-md-4  text-center my-auto">
                 <div class="ml-3 bg-light ">
                     <i class="far fa-check-circle my-5 pt-5 i-perso"></i>
-                    <h3 class="m-4 taille-h3 font-weight-bold">TRSUTED BY 10,000+ CUSTOMERS</h3>
-                    <p class="couleur-p mx-5 font-weight-bold">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <button type="button" name="learn more" value="" class="rounded bg-dark text-white m-5 px-5 py-3">Learn More</button>
+                    <h3 class="taille-h3 font-weight-bold">TRSUTED BY 10,000+ CUSTOMERS</h3>
+                    <p class="couleur-p mx-5 font-weight-bold p-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <button type="button" name="learn more" value="" class="rounded bg-dark text-white m-5 px-5 py-3 font-weight-bold">Learn More</button>
                 </div>
             </div>
             <div class="col-md-4 text-center my-auto text-white ">
                 <div class="ml-3 bg-red">
                     <i class="fa fa-paper-plane my-5 pt-5 i-perso"></i>
-                    <h3 class="m-4 taille-h3 font-weight-bold">VERY FAST SHIPPING</h3>
-                    <p class=" mx-5 font-weight-bold">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <button type="button" name="learn more" value="" class="rounded bg-white text-dark m-5 px-5 py-3">Learn More</button>
+                    <h3 class="taille-h3 font-weight-bold">VERY FAST SHIPPING</h3>
+                    <p class="mx-5 font-weight-bold p-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <button type="button" name="learn more" value="" class="rounded bg-white text-dark m-5 px-5 py-3 font-weight-bold">Learn More</button>
                 </div>
             </div>
             <div class="col-md-4  text-center my-auto">
-                    <div class="ml-3 bg-light">
-                        <i class="far fa-check-circle my-5 pt-5 i-perso"></i>
-                        <h3 class="m-4 taille-h3 font-weight-bold">TRSUTED BY 10,000+ CUSTOMERS</h3>
-                        <p class="couleur-p mx-5 font-weight-bold">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                        <button type="button" name="learn more" value="" class="rounded bg-dark text-white m-5 px-5 py-3">Learn More</button>
-                    </div>
+                <div class="ml-3 bg-light">
+                    <i class="far fa-check-circle my-5 pt-5 i-perso"></i>
+                    <h3 class="taille-h3 font-weight-bold">TRSUTED BY 10,000+ CUSTOMERS</h3>
+                    <p class="couleur-p mx-5 font-weight-bold p-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <button type="button" name="learn more" value="" class="rounded bg-dark text-white m-5 px-5 py-3 font-weight-bold">Learn More</button>
                 </div>
+            </div>
         </div>
     </div>
     <!-- End Section 3 articles -->
@@ -520,11 +526,7 @@
     <!-- End copyright -->
     
     <!-- script + dependance -->
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> 
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
     <script src="src/js/main.js"></script>
     <!-- Fin script/dependance -->
