@@ -22,19 +22,6 @@ boutonBlanc.addEventListener('click', () => {
 
 
 // NAV ON SCROLL
-
-// let onScroll = document.getElementById('navbar');
-// window.onscroll = function() {scrollFunction()};
-
-// function scrollFunction() {
-//   if (document.body.scrollTop > 330 || document.documentElement.scrollTop > 330) {
-//     navbar.classList.add('fixed-top')
-//     navbar.classList.add('bg-white')
-//   } else {
-//     navbar.classList.remove('fixed-top')
-//   }
-// }
-
 window.onscroll = function () { NavSticky() };
 
 let nav = document.getElementById("navbar");
@@ -83,27 +70,32 @@ buttonCo.addEventListener("click", afficherConnection);
 buttonEnr.addEventListener("click", afficherEnregistrement);
 
 
-// Carousel 
-$(document).ready(function(){
-    $('.customer-logos').slick({
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 1500,
-        arrows: false,
-        dots: false,
-        pauseOnHover: false,
-        responsive: [{
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 4
-            }
-        }, {
-            breakpoint: 520,
-            settings: {
-                slidesToShow: 3
-            }
-        }]
-    });
-});
-// END Carousel
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let onScroll = document.getElementById('navbar');
+// window.onscroll = function() {scrollFunction()};
+
+// function scrollFunction() {
+//   if (document.body.scrollTop > 330 || document.documentElement.scrollTop > 330) {
+//     navbar.classList.add('fixed-top')
+//     navbar.classList.add('bg-white')
+//   } else {
+//     navbar.classList.remove('fixed-top')
+//   }
+// }
